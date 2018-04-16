@@ -19,7 +19,7 @@ class CreateUsersIdentityTable extends Migration
             $table->string('address');
             $table->string('phone');
             $table->string('social');
-            $table->string('ktp');
+            $table->string('img_ktp');
             $table->timestamps();
 
             $table->foreign('id')->references('id')->on('users');

@@ -29,6 +29,7 @@ Route::get('event', function(){
     return view('event');
 })->name('event');
 
+Route::post('inputidentity', 'UserIdentitiyController@PostEvent')->name('janganvian2');
 Route::get('login/facebook', 'Auth\LoginController@redirectToFacebook')->name('login_facebook');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleFacebookCallback');
 
