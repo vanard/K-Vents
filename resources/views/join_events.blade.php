@@ -15,7 +15,13 @@
               </div>
               <div id="main-nav" class="collapse navbar-collapse navStyle">
                   <ul class="nav navbar-nav" id="mainNav">
-                    <li><a href="{{ route('home_admin') }}" class="scroll-link">Home</a></li>
+                    @if (Route::has('login'))
+                    @auth
+                        <li><a href="{{ route('home_admin') }}" class="scroll-link">Home</a></li>
+                    @else
+                    <li><a href="{{ route('index') }}" class="scroll-link">Home</a></li>
+                    @endauth
+                    @endif
              
                       <li class="nav-item dropdown">
                           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -23,7 +29,7 @@
                           </a>
               
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="{{ route('account') }}">Create Events</a>
+                              <a class="dropdown-item" href="{{ route('make_event') }}">Create Events</a>
                               <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">

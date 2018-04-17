@@ -12,13 +12,13 @@ Route::group(['middleware' => ['auth']], function(){
     }); 
     Route::get('/home_user', 'HomeController@home_user')->name('home_user');
 
-    Route::get('account', function(){
-        return view('account_settings');
-    })->name('account');
+    Route::get('account', 'UserIdentitiyController@show')->name('account');
     
     Route::get('make_event', function(){
         return view('create_events');
     })->name('make_event');
+
+    Route::post('insertingdata','UserIdentitiyController@store')->name('insertingdata');
 });
 
 Route::get('join_event', function(){

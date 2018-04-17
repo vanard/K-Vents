@@ -31,8 +31,9 @@
           </a>
 
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('account') }}">Create Events</a>
-            <a class="dropdown-item" href="{{ route('account') }}">Join Events</a>
+            <a class="dropdown-item" href="{{ route('make_event') }}">Create Events</a>
+            <a class="dropdown-item" href="{{ route('join') }}">Join Events</a>
+            <a class="dropdown-item" href="{{ route('account') }}">Account Settings</a>
             <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();">
@@ -105,7 +106,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four   livep isotope-item">
           <div class="portfolio_img"> <img src="img/tzuyu1.jpg"  alt="tzuyu1"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">TWICE</h3>
               </div>
@@ -118,7 +119,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four  kevent isotope-item">
           <div class="portfolio_img"> <img src="img/BlackPink2.jpg" alt="BlackPink2"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">BLACKPINK</h3>
               </div>
@@ -131,7 +132,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four  kevent  isotope-item">
           <div class="portfolio_img"> <img src="img/BlackPink3.jpg" alt="BlackPink3"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">BLACKPINK</h3>
               </div>
@@ -144,7 +145,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four  anniv  birthday web isotope-item">
           <div class="portfolio_img"> <img src="img/BlackPink4.png" alt="BlackPink4"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">BLACKPINK</h3>
               </div>
@@ -157,7 +158,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four  kevent isotope-item">
           <div class="portfolio_img"> <img src="img/BlackPink5.jpg" alt="BlackPink5"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">BLACKPINK</h3>
               </div>
@@ -170,7 +171,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four  web isotope-item">
           <div class="portfolio_img"> <img src="img/BlackPink6.jpg" alt="BlackPink6"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">BLACKPINK</h3>
               </div>
@@ -183,7 +184,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four  kevent web isotope-item">
           <div class="portfolio_img"> <img src="img/BlackPink7.jpg" alt="BlackPink7"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">BLACKPINK</h3>
               </div>
@@ -196,7 +197,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four   anniv isotope-item">
           <div class="portfolio_img"> <img src="img/momoland.jpg" alt="yeonwoo"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">MOMOLAND</h3>
               </div>
@@ -209,7 +210,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 480px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four   anniv isotope-item">
           <div class="portfolio_img"> <img src="img/BlackPink9.jpg" alt="BlackPink9"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">BLACKPINK</h3>
               </div>
@@ -222,7 +223,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 480px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four   anniv isotope-item">
           <div class="portfolio_img"> <img src="img/BlackPink10.jpg" alt="BlackPink10"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">BLACKPINK</h3>
               </div>
@@ -235,7 +236,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 480px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four   anniv isotope-item">
           <div class="portfolio_img"> <img src="img/tzuyu2.jpg" alt="tyuzu2"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">TWICE</h3>
               </div>
@@ -248,7 +249,7 @@
         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 480px, 0px) scale3d(1, 1, 1); height: 240px; width: 337px; opacity: 1;" class="portfolio-item one-four   anniv isotope-item">
           <div class="portfolio_img"> <img src="img/BlackPink12.jpg" alt="BlackPink12"> </div>
           <div class="item_overlay">
-            <a href="{{ route('make_event') }}">
+            <a href="{{ route('join') }}">
               <div class="item_info">
                 <h3 class="project_name">BLACKPINK</h3>
               </div>

@@ -25,8 +25,9 @@
           </a>
 
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ route('account') }}">Create Events</a>
+              <a class="dropdown-item" href="{{ route('make_event') }}">Create Events</a>
               <a class="dropdown-item" href="{{ route('join') }}">Join Events</a>
+              <a class="dropdown-item" href="{{ route('account') }}">Account Settings</a>
               <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();">

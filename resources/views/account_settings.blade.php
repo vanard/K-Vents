@@ -23,6 +23,9 @@
                           </a>
               
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="{{ route('make_event') }}">Create Events</a>
+                              <a class="dropdown-item" href="{{ route('join') }}">Join Events</a>
+                              <a class="dropdown-item" href="{{ route('account') }}">Account Settings</a>
                               <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">
@@ -42,5 +45,61 @@
         </div>
       </header>
 <!--Header_section-->
-
+    @if(count($errors) > 0)
+    <div class="container">
+      <div class="aler alert-danger">
+        Upload validation error <br/><br/>
+        <ul>
+          @foreach($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+    </div>
+    @endif
+    <form class="form-group" method="post" action="{{  route('insertingdata') }}" enctype="multipart/form-data">
+    {{ csrf_field() }}
+    <!-- name address phone social  img_ktp -->
+      <div class="container">
+        
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="nameUser" placeholder="Please Enter Your Name" name="name" value="{{ Auth::user()->name }}">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Address</label>
+          <input type="text" class="form-control" id="address" aria-describedby="addressUser" placeholder="Your location?" name="address">
+        </div>
+         <div class="form-group">
+          <label for="exampleInputEmail1">Phone Number</label>
+          <input type="number" class="form-control" id="phonenumber" aria-describedby="phoneNumber" placeholder="Phone number" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Social</label>
+          <input type="text" class="form-control" id="socialMedia" aria-describedby="phoneNumber" placeholder="Social Media" name="social">
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <label>Image KTP</label>
+            <input type="file" name="img_ktp">
+          </div>
+          @if($message = Session::get('success'))
+          <div class="col-md-5">
+            <div class="aler alert-success alert-block">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+              <strong>{{ $message }}</strong>
+              <img src="/img_users/{{ Session::get('path') }}" width="100" />
+            </div>
+          </div>
+          @endif
+        </div>
+        <br/>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary " style="width: 120px; height: 60px; font-family: verdana;">Submit</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </form>
 @endsection

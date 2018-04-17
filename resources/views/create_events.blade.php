@@ -23,7 +23,7 @@
                           </a>
               
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="{{ route('account') }}">Join Events</a>
+                              <a class="dropdown-item" href="{{ route('join') }}">Join Events</a>
                               <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">
@@ -43,5 +43,50 @@
         </div>
       </header>
       <!--Header_section-->
+
+    @if(count($errors) > 0)
+    <div class="container">
+      <div class="aler alert-danger">
+        Upload validation error <br/><br/>
+        <ul>
+          @foreach($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+    </div>
+    @endif
+    <form class="form-group" method="post" action="{{  route('insertingdata') }}" enctype="multipart/form-data">
+    {{ csrf_field() }}
+    <!-- name address phone social  img_ktp -->
+      <div class="container">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Title Event</label>
+          <input type="text" class="form-control" id="name" placeholder="Please Enter Title Event" name="title">
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <label>Image Event</label>
+            <input type="file" name="img_thumb">
+          </div>
+          @if($message = Session::get('success'))
+          <div class="col-md-5">
+            <div class="aler alert-success alert-block">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+              <strong>{{ $message }}</strong>
+              <img src="/img_events/{{ Session::get('path') }}" width="100" />
+            </div>
+          </div>
+          @endif
+        </div>
+        <br/>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary " style="width: 120px; height: 60px; font-family: verdana;">Submit</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </form>
 
 @endsection

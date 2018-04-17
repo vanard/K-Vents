@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {
@@ -23,16 +24,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-         return view('index');
+        $acs = DB::table('users_identity')->get();
+
+         return view('index', ['acs' => $acs]);
     }
 
     public function home_admin()
     {
-      return view('home_admin');
+      $acs = DB::table('users_identity')->get();
+
+      return view('home_admin', ['acs' => $acs]);
     }
 
     public function home_user()
     {
-      return view('home_user');
+      $acs = DB::table('users_identity')->get();
+
+      return view('home_user', ['acs' => $acs]);
     }
 }
