@@ -42,41 +42,9 @@ class UserIdentitiyController extends Controller
         ];
 
         // UserIdentity::create($data);
-        $acs = DB::table('users_identity')->get()->id;
-        if($acs == $id){
-            return redirect('home_admin');
-        }else{
-            DB::table('users_identity')->insert($data);
-            return redirect('make_event')->with('success', 'sucessfully uploaded');
-        }
-    }
-
-    public function createEvent(Request $req)
-    {
-        $this->validate($req, [
-            'title' => 'required',
-            'img_thumb' => 'required|image|mimes:jpeg,png,jpg,gif|max:4096']);
-
-        $photo = "";
-        if ($req->hasFile('img_thumb')) {
-            $destination = "img_events";
-            $image = $req->img_thumb;
-            $ext = $image->getClientOriginalExtension();
-            $fileName = time() . '.' . $ext;
-            $image->move($destination, $fileName);
-            $photo = $fileName;    
-        }
-
-        $data = [
-            'title' => $req->title,
-            'img_thumb' => $photo
-        ];
-
-        // UserIdentity::create($data);
-        DB::table('')->insert($data);
-
-        return redirect('join_event')->with('success', 'sucessfully uploaded');
-
+        DB::table('users_identity')->insert($data);
+        return redirect('make_event')->with('success', 'sucessfully uploaded');
+        
     }
 
     public function show(){

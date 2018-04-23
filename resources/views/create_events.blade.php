@@ -56,7 +56,7 @@
       </div>
     </div>
     @endif
-    <form class="form-group" method="post" action="{{  route('insertingdata') }}" enctype="multipart/form-data">
+    <form class="form-group" method="post" action="{{  route('insertingevent') }}" enctype="multipart/form-data">
     {{ csrf_field() }}
     <!-- name address phone social  img_ktp -->
       <div class="container">
@@ -64,25 +64,35 @@
           <label for="exampleInputEmail1">Title Event</label>
           <input type="text" class="form-control" id="name" placeholder="Please Enter Title Event" name="title">
         </div>
+        <div class="form-group"> 
+          <label> Target Donasi</label> 
+          <input type="text" class="form-control" id="name" placeholder="Rp." name="Target"> 
+        </div> 
+        <div class="form-group"> 
+          <label> Deadline Event</label> 
+          <input type="date" class="form-control" id="name" placeholder="Pilih tanggal" name="Deadline"> 
+        </div> 
+
+        <div class="form-group"> 
+          <label>Deskripsi Singkat</label> </br>
+          <textarea name="Deskripsi" cols="50" rows="2"> </textarea> 
+        </div>
+
         <div class="row">
           <div class="col-md-5">
             <label>Image Event</label>
             <input type="file" name="img_thumb">
           </div>
           @if($message = Session::get('success'))
-          <div class="col-md-5">
-            <div class="aler alert-success alert-block">
-              <button type="button" class="close" data-dismiss="alert">x</button>
-              <strong>{{ $message }}</strong>
-              <img src="/img_events/{{ Session::get('path') }}" width="100" />
-            </div>
-          </div>
+          <script>
+            document.alert('Sucess')
+          </script>
           @endif
         </div>
         <br/>
         <div class="row">
           <div class="col-md-12 text-center">
-            <button type="submit" class="btn btn-primary " style="width: 120px; height: 60px; font-family: verdana;">Submit</button>
+            <button type="submit" class="btn btn-primary " style="width: 120px; height: 60px;">Submit</button>
           </div>
         </div>
       </div>

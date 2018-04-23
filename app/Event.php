@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserIdentity extends Model
+class Event extends Model
 {
     protected $fillable = [
-        'id', 'name', 'address', 'phone', 'social', 'img_ktp'
+        'judul', 'target', 'deadline', 'deskripsi', 'img_event', 
     ];
 }

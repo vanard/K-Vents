@@ -18,7 +18,9 @@ Route::group(['middleware' => ['auth']], function(){
         return view('create_events');
     })->name('make_event');
 
-    Route::post('insertingdata','UserIdentitiyController@store')->name('insertingdata');
+    Route::post('insd','UserIdentitiyController@store')->name('insertingdata');
+
+    Route::post('inse', 'EventController@store')->name('insertingevent');
 });
 
 Route::get('join_event', function(){
